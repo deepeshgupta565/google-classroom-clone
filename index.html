@@ -10,69 +10,72 @@
         integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-  <section class="container">
-    <div class="banner">
-        <div>
-            <img src="google-classroom.jpeg" alt="google-classroom-logo" >
-        </div>
-        <div>
-            <h1>Classroom</h1>
-        </div>
-        <div>
-            <ul>
-                <li>Learn</li>
-                <li>Share</li>
-                <li>Grow</li>
-            </ul>
-        </div>
-        <div>
-            <p>Join your classes, get assignments,<br>track your progress and stay connected <br>with your teachers and classmates</p>
-        </div>
-    </div>
-   <div class="form">
-    <h3>Welcome</h3>
-    <p>Login to your account to continue</p>
-
-    <form action="" id="login-form">
-
-        <div class="form-container">
-            <label for="email">Email Address</label>
-
-            <div class="input-box">
-                <i class="fa-regular fa-envelope"></i>
-                <input type="email"
-                       placeholder="Enter Your Email Address"
-                       id="email">
+    <section class="container">
+        <div class="banner">
+            <div>
+                <img src="google-classroom.jpeg" alt="google-classroom-logo">
+            </div>
+            <div>
+                <h1>Classroom</h1>
+            </div>
+            <div>
+                <ul>
+                    <li>Learn</li>
+                    <li>Share</li>
+                    <li>Grow</li>
+                </ul>
+            </div>
+            <div>
+                <p>Join your classes, get assignments,<br>track your progress and stay connected <br>with your teachers
+                    and classmates</p>
             </div>
         </div>
+        <div class="form">
+            <h3>Welcome</h3>
+            <p>Login to your account to continue</p>
 
-        <div class="form-container">
-            <label for="pass">Password</label>
+            <form action="" id="login-form">
 
-            <div class="input-box">
-                <i class="fa-solid fa-lock"></i>
-                <input type="password"
-                       placeholder="Enter Your Password"
-                       id="pass">
-            </div>
+                <div class="form-container">
+                    <label for="email">Email Address</label>
+
+                    <div class="input-box">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" placeholder="Enter Your Email Address" id="email">
+                        <p id="msg1"></p>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <label for="pass">Password</label>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Enter Your Password" id="pass">
+                         <p id="msg"></p>
+                    </div>
+                    
+                   
+                </div>
+
+                <div class="form-container">
+                    <button type="submit" id="btn1">
+                        Login
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </form>
         </div>
+    </section>
 
-        <div class="form-container">
-            <button type="submit">
-                Login
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
-        </div>
-
-    </form>
-</div>
-  </section>
-
+    <script src="Login.js"></script>
 
 </body>
 

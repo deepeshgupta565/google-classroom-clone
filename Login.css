@@ -1,54 +1,75 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    width: 100%;
+    
 }
-.container{
+body{
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0px;
-    margin-left: 0px;
+    margin: 45px;
+    max-width: 1000px;
+    width: 100%;
 }
-.banner{
-    height: 600px;
-    width: 500px;
+.container .para2{
+        font-size: 15px;
+        font-weight: 300;
+        position: absolute;
+        left: 12px;
+        margin-top: 5px;
+}
+
+
+.banner {
+    min-height: 600px;
+    width: 50%;
     background-color: #0C7759;
     color: white;
+    padding: 30px;
     position: relative;
     overflow: hidden;
-    text-align:justify;
+    text-align: justify;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-    /* margin: 25px; */
-    
+   
+
 }
-.banner div img{
+
+.banner div img {
     position: absolute;
     top: 50px;
     right: 250px;
     width: 100px;
     height: 100px;
 }
-.banner div h1{
+
+.banner div h1 {
     position: absolute;
     top: 130px;
     left: 100px;
     margin-top: 45px;
     font-size: 40px;
     font-weight: 900;
-     font-family: "Roboto Slab";
+    font-family: "Roboto Slab";
 }
-.banner div p{
+
+.banner div p {
     position: absolute;
     bottom: 180px;
     left: 85px;
-     font-family: "Quicksand";
-     font-size: 20px;
-     
+    font-family: "Quicksand";
+    font-size: 20px;
+
 
 }
-.banner div ul{
+
+.banner div ul {
     position: absolute;
     bottom: 300px;
     left: 85px;
@@ -57,28 +78,31 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    
+
 }
-.banner div ul li{
+
+.banner div ul li {
     list-style: none;
     font-size: 22px;
-    
+
 }
+
 .form {
-    height: 600px;
-    width: 500px;
-    border: 2px solid gray;
-    padding: 0 40px;
+    min-height: 600px;
+    width: 50%;
+    border: 2px solid transparent;
+    padding:  40px;
     position: relative;
 
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
-                rgba(17, 17, 26, 0.1) 0px 16px 56px,
-                rgba(17, 17, 26, 0.1) 0px 24px 80px;
-
+        rgba(17, 17, 26, 0.1) 0px 16px 56px,
+        rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 .form h3 {
     font-size: 32px;
     font-weight: bold;
@@ -86,22 +110,26 @@
     text-align: center;
     margin-bottom: 10px;
 }
+
 .form p {
     font-size: 18px;
     font-family: "Roboto Slab";
     text-align: center;
     margin-bottom: 30px;
 }
+
 #login-form {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 #login-form .form-container {
     width: 100%;
     margin-bottom: 20px;
 }
+
 .input-box {
     width: 100%;
     height: 48px;
@@ -116,13 +144,18 @@
 
     transition: 0.3s;
 }
+
 .input-box i {
     font-size: 18px;
     color: #777;
-    margin-right: 12px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    position: relative;
 }
+
 .input-box input {
     width: 100%;
+    min-width: 0;
     height: 100%;
 
     border: none;
@@ -131,19 +164,22 @@
     font-size: 15px;
     font-family: "Roboto Slab";
 }
+
 .input-box:focus-within {
     border-color: #07805E;
     box-shadow: 0 0 5px rgba(7, 128, 94, 0.25);
 }
+
 #login-form .form-container label {
     display: block;
     font-size: 17px;
     font-family: "Roboto Slab";
     margin-bottom: 8px;
 }
+
 #login-form button {
     width: 100%;
-    height: 48px;
+    min-height: 48px;
 
     background-color: #07805E;
     color: white;
@@ -156,14 +192,125 @@
 
     cursor: pointer;
 
-    margin-top: 15px;
+    margin-top: 25px;
 
     transition: 0.3s;
 }
+
 #login-form button i {
     margin-left: 8px;
 }
+
 #login-form button:hover {
     background-color: #066b4f;
 }
+ #msg{
+        font-size: 12px;
+        position: absolute;
+        bottom: 165px;
+    }
+#msg1{
+        font-size: 12px;
+        position: absolute;
+        top: 285px;
+}
+@media (max-width:768px){
+    body{
+        padding: 15px;
+    }
+    .container{
+        max-width: 550px;
+        flex-direction: column;
+    }
+    .banner,.form{
+        width: 100%;
 
+    }
+    .banner{
+        min-height: 500px;
+        padding: 35px;
+    }
+    .banner div img{
+        width: 70px;
+        height: 70px;
+        top: 25px;
+        right: 25px;
+    }
+    .banner div h1{
+        top: 45px;
+        left: 30px;
+        margin-top: 0;
+        font-size: 32px;
+    }
+    .banner div ul{
+        left: 10px;
+        bottom: 110px;
+    }
+    .banner div p{
+        left: 30px;
+        bottom: 25px;
+        font-size: 16px;
+    }
+}
+@media (max-width:480px){
+    body{
+        padding: 10px;
+        
+    }
+    .container{
+        width: 100%;
+        margin: 25px;
+        height: 100vh;
+        
+    }
+    .banner{
+        min-height: 260px;
+        padding: 20px;
+    }
+    .banner div img{
+        width: 55px;
+        height: 55px;
+        top: 20px;
+        right: 20px;
+    }
+    .banner div ul{
+        left: 0;
+        bottom: 90px;
+        gap: 5px;
+    }
+    .banner div ul li{
+        font-size: 16px;
+    }
+    .banner div p{
+        left: 20px;
+        bottom: 20px;
+        font-size: 13px;
+    }
+    .form{
+        min-height: 460px;
+        padding: 25px 20px;
+    }
+    .form h3{
+        font-size: 27px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .form p{
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    #login-form .login-container label{
+            font-size: 15px;
+
+    }
+    .input-box{
+        height: 45px;
+    }
+    .input-box input{
+        font-size: 13px;
+    }
+    #login-form button{
+        font-size: 16px;
+    }
+   
+}

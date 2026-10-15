@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+body{
+    font-family: "Roboto";
+    min-height:100vh;
+    
+}
+.navbar{
+    width: 100%;
+    min-height: 15vh;
+    background-color: #0A6B59;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+}
+#bars{
+    font-size: 45px;
+    border: 2px solid transparent;
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    left: 0px;
+    top: 20px;
+    cursor: pointer;
+}
+img{
+    position: absolute;
+    left: 100px;
+    top: 20px;
+}
+.navbar div h3{
+    position: absolute;
+    left: 200px;
+    top: 20px;
+    font-size: 30px;
+    font-weight: 700;
+
+}
+.navbar div input{
+    border: 2px solid black;
+    min-height: 45px;
+    width: 45%;
+    border-radius: 50px;
+    font-size: 20px;
+    background-color:black;
+    font-weight: 400;
+    color: white;
+    position: absolute;
+    left: 500px;
+    top: 20px;
+    padding: 15px;
+    margin-right: 25px;
+}
+.navbar .add{
+
+     font-size: 40px;
+    border: 2px solid transparent;
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    margin-right: 25px;
+}
