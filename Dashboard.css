@@ -71,3 +71,162 @@ img{
     cursor: pointer;
     margin-right: 25px;
 }
+.dashboard{
+    width: fit-content;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:flex-start;
+    gap: 30px;
+    background-color: white;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    border: 2px solid lightslategray;
+    display: none;
+}
+
+.dashboard div button{
+
+    border: none;
+    font-size: 22px;
+    padding: 8px 15px;
+    background-color: transparent;
+    /* border-radius: 30px; */
+    margin: 15px;
+    color: #32435B;
+    cursor: pointer;
+
+}
+.dashboard div button:hover{
+    
+    background-color: #E3F2F0;
+    color: #087A63;
+}
+.dashboard .icon{
+    margin-right: 20px; 
+}
+.options{
+    width: fit-content;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    border: 2px solid lightslategray; 
+    position: absolute;
+   background-color: white;
+    color: black;
+    right: 75px;
+    top: 50px;
+    z-index: 1;
+    display: none;
+}
+.options button{
+    border: none;
+    font-size: 22px;
+    padding: 8px 15px;
+    background-color: transparent;
+    color: black;
+    width: 100%;
+}
+.options button:hover{
+    background-color: gray;
+    color: white;
+}
+.modal-overlay{
+    
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+     visibility: hidden; 
+    opacity: 0;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+.modal-overlay.active{
+    visibility: visible;
+    opacity: 1;
+    
+    
+}
+.create-class-form{
+    width: 450px;
+    max-width: 90%;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 10px 35px rgba(0,0, 0,0.2);
+    overflow: hidden;
+}
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid #eee;
+}
+.modal-header h2{
+    font-size: 24px;
+    color: #17324D;
+    
+}
+.modal-header button{
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    color: #666;
+    cursor: pointer;
+}
+.createClassForm{
+    padding: 25px;
+}
+.input-group{
+    margin-bottom: 20px;
+}
+.input-group label{
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #344953;
+}
+.input-group label span{
+    color: red;
+}
+.input-group input{
+    width: 100%;
+    height: 45px;
+    padding: 0 13px;
+    border: 1px solid #c9c9c9;
+    border-radius: 7px;
+    outline: none;
+    font-size: 15px;
+}
+.input-group input:focus{
+    border-color: #07805e;
+    box-shadow: 0,0,0,2px rgba(7,128,94,0.1);
+}
+
+.modal-buttons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 25px;
+}
+.modal-buttons button{
+    padding: 10px 22px;
+    border-radius: 7px;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+#cancelBtn{
+    background: white;
+    border: 1px solid #ccc;
+}
+#createBtn{
+    background: #07805e;
+    color: white;
+    border: none;
+
+}
+#cancelBtn:hover{
+    background: #066b4f;
+}

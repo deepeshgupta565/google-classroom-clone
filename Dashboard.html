@@ -9,11 +9,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Clarity+City:ital,wght@0,100..900;1,100..900&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="Dashboard.css">
+<link rel="stylesheet" href="create-class-form.css">
 </head>
 <body>
    <nav class="navbar">
         <div>
-            <button id="bars"><i class="fa-solid fa-bars bars"></i></button>
+            <button id="bars" onclick="show()" ondblclick="hide()"><i class="fa-solid fa-bars bars"></i></button>
         </div>
         <div>
             <img src="google-classroom.jpeg" alt="google-classroom" height="50px">
@@ -25,8 +26,72 @@
             <input type="text" placeholder="Search Classes">
         </div>
         <div>
-            <button id="add"><i class="fa-solid fa-plus add"></i></button>
+            <button id="add" onclick="showclasses()" ondblclick="hideclasses()"><i class="fa-solid fa-plus add"></i></button>
         </div>
    </nav>
+   <div class="dashboard">
+        <div>
+          <button id="home"><i class="fa-solid fa-house icon"></i>Home</button>
+        </div>
+        <div>
+            <button id="class"><i class="fa-solid fa-users icon"></i>My Classes</button>
+        </div>
+        <div>
+            <button id="assign"><i class="fa-solid fa-rectangle-list icon"></i>Assignment</button>
+        </div>
+        <div>
+            <button id="Calender"><i class="fa-solid fa-calendar-days icon"></i>Calender</button>
+        </div>
+        <div>
+            <button id="people"><i class="fa-solid fa-user icon"></i>People</button>
+        </div>
+   </div>
+   <div class="options">
+        <div>
+            <button id="joinclass">Join Class</button>
+        </div>
+        <div>
+            <button id="createclass">Create Class</button>
+        </div>
+   </div>
+   <div class="modal-overlay" id="createClassModal">
+            <div class="create-class-form">
+                <div class="modal-header">
+                    <h2>Create Class</h2>
+                    <button type="button" id="closeModal">&times;</button>
+                </div>
+                <form action="" class="createClassForm">
+                    <div class="input-group">
+                        <label for="classname">
+                            Class name <span>*</span>
+                        </label>
+                        <input type="text" id="classname" placeholder="e.g Java Programming">
+                    </div>
+                     <div class="input-group">
+                        <label for="section">
+                            Section
+                        </label>
+                        <input type="text" id="section" placeholder="e.g B.Teach CSE">
+                    </div>
+                     <div class="input-group">
+                        <label for="subject">
+                            Subject
+                        </label>
+                        <input type="text" id="subject" placeholder="e.g javascript">
+                    </div>
+                     <div class="input-group">
+                        <label for="room">
+                            Room
+                        </label>
+                        <input type="text" id="room" placeholder="e.g Lab 101">
+                    </div>
+                    <div class="modal-buttons">
+                        <button type="button" id="cancelBtn">Cancel</button>
+                        <button type="button" id="createBtn">Create Class</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+   <script src="Dashboard.js"></script>
 </body>
 </html>
