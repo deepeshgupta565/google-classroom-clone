@@ -14,7 +14,7 @@
 <body>
    <nav class="navbar">
         <div>
-            <button id="bars" onclick="show()" ondblclick="hide()"><i class="fa-solid fa-bars bars"></i></button>
+            <button id="bars"><i class="fa-solid fa-bars bars"></i></button>
         </div>
         <div>
             <img src="google-classroom.jpeg" alt="google-classroom" height="50px">
@@ -26,10 +26,10 @@
             <input type="text" placeholder="Search Classes">
         </div>
         <div>
-            <button id="add" onclick="showclasses()" ondblclick="hideclasses()"><i class="fa-solid fa-plus add"></i></button>
+            <button id="adds"><i class="fa-solid fa-plus add"></i></button>
         </div>
    </nav>
-   <div class="dashboard">
+   <div class="dashboard" id="Dashboards">
         <div>
           <button id="home"><i class="fa-solid fa-house icon"></i>Home</button>
         </div>
@@ -46,7 +46,7 @@
             <button id="people"><i class="fa-solid fa-user icon"></i>People</button>
         </div>
    </div>
-   <div class="options">
+   <div class="options" id="option">
         <div>
             <button id="joinclass">Join Class</button>
         </div>
@@ -90,6 +90,45 @@
                         <button type="button" id="createBtn">Create Class</button>
                     </div>
                 </form>
+            </div>
+        </div>
+        <div class="modal-overlays" id="joinClassModel">
+            <div class="join-class-form">
+                <div class="join-header">
+                    <h2>Join Class</h2>
+                     <button type="button" id="closeModals">&times;</button>
+                </div>
+                <FORM class="joinClassForm">
+                     <div class="input-group">
+                        <label for="code">
+                            Class Code <span>*</span>
+                        </label>
+                        <input type="text" id="code" placeholder="e.g 1001">
+                    </div>
+                     <div class="modal-buttons">
+                        <button type="button" id="cancelBtns">Cancel</button>
+                        <button type="button" id="JoinBtn">Join Class</button>
+                    </div>
+                </FORM>
+            </div>
+        </div>
+        <div class="calender-page" id="showcalender">
+            <div class="calender-header">
+                <h2>Calender</h2>
+                <div class="calender-controls">
+                    <button id="prevmonth"><i class="fa-solid fa-chevron-left"></i></button>
+                    <h3 id="monthyear">October 2026</h3>
+                    <button id="nextmonth"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="calender" id="calenders">
+                <div class="day">Sun</div>
+                <div class="day">Mon</div>
+                <div class="day">Tue</div>
+                <div class="day">Wed</div>
+                <div class="day">Thu</div>
+                <div class="day">Fri</div>
+                <div class="day">Sat</div>                
             </div>
         </div>
    <script src="Dashboard.js"></script>
