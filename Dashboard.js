@@ -2,6 +2,7 @@ const dashboards=document.querySelector("#Dashboards");
 const openBtn = document.querySelector("#bars")
 openBtn.addEventListener("click",()=>{
     dashboards.classList.toggle("active");
+
 })
 const option = document.querySelector("#option")
 const add = document.querySelector("#adds");
@@ -14,6 +15,7 @@ const cancelBtn = document.querySelector("#cancelBtn");
 const createclassForm=document.querySelector(".createClassForm");
 document.querySelector("#createclass").addEventListener("click",()=>{
     createclassmodel.classList.add("active");
+    option.classList.remove("active");
 })
 closemodel.addEventListener("click",()=>{
     createclassmodel.classList.remove("active");
@@ -98,3 +100,73 @@ nextBtn.addEventListener("click",()=>{
     currentdate.setMonth(currentdate.getMonth()+1);
     genratecalender();
 })
+
+const classname = document.querySelector("#classname");
+const section = document.querySelector("#section");
+const subject = document.querySelector("#subject");
+const room = document.querySelector("#room");
+const createClassBtn = document.querySelector("#createBtn");
+const cancelClassBtn = document.querySelector("#cancelBtn");
+let classes =[];
+const classcards = document.querySelector("#classcards");
+createClassBtn.addEventListener("click",()=>{
+        const classnamevalue=classname.value;
+        const sectionvalue = section.value;
+        const subjectvalue = subject.value;
+        const roomvalue = room.value;
+        console.log(classnamevalue);
+        console.log(sectionvalue);
+        console.log(subjectvalue);
+        console.log(roomvalue);
+       const classcode=genrateclasscode();
+       console.log(classcode);
+       const newclass={
+        classname: classnamevalue,
+        section: sectionvalue,
+        subject: subjectvalue,
+        room: roomvalue,
+        classcode: classcode
+       };
+       classes.push(newclass);
+       console.log(classes);
+       const card = document.createElement("div");
+       card.classList.add("class-card");
+       const cardtitle = document.createElement("h3");
+       cardtitle.textContent=newclass.classname;
+       card.appendChild(cardtitle);
+       classcards.appendChild(card);
+       const cardsections = document.createElement("p");
+       cardsections.textContent=newclass.section;
+       card.appendChild(cardsections);
+       const cardsubject = document.createElement("p");
+       cardsubject.textContent= "Subject" +newclass.subject;
+       card.appendChild(cardsubject);
+       const cardRoom = document.createElement("p");
+       cardRoom.textContent=newclass.room;
+       card.appendChild(cardRoom);
+       const cardclasscode = document.createElement("p");
+       cardclasscode.textContent="ClassCode "+ newclass.classcode;
+       card.appendChild(cardclasscode);
+       classname.value="";
+       section.value="";
+       subject.value="";
+       room.value="";
+       createclassmodel.classList.remove("active");
+
+
+});
+
+function genrateclasscode()
+{
+    const character = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+   
+    let code=""
+    for(let i=0;i<6;i++)
+    {
+        const randomindex = Math.floor(Math.random()*character.length);
+        const randomcharecter = character[randomindex];
+        code+=randomcharecter;
+        
+    }
+    return code;
+}
