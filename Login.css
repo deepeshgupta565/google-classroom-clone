@@ -205,11 +205,14 @@ body{
     background-color: #066b4f;
 }
  #msg{
+    
+       
         font-size: 12px;
         position: absolute;
         bottom: 165px;
     }
 #msg1{
+        
         font-size: 12px;
         position: absolute;
         top: 285px;
